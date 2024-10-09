@@ -21,11 +21,11 @@ public class Button : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        _loadSprites.Load();
-        if (_animation != null)
-            return;
-        
-        _animation = StartCoroutine(AlphaBlinking());
+        if (_animation == null)
+        {
+            _loadSprites.Load();
+            _animation = StartCoroutine(AlphaBlinking());
+        }
     }
 
     private IEnumerator AlphaBlinking()

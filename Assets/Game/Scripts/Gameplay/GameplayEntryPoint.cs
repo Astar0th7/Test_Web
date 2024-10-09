@@ -1,4 +1,5 @@
 ﻿using Game.Scripts.Root.Services;
+using Game.Scripts.Root.Services.AssetsLoader;
 using UnityEngine;
 
 namespace Game.Scripts.Gameplay
@@ -10,6 +11,7 @@ namespace Game.Scripts.Gameplay
         private void Awake()
         {
             ServiceLocator.Instance.RegisterSingle(_loadSprites);
+            ServiceLocator.Instance.RegisterSingle<ILocalAssetLoader>(new LocalAssetLoader());
         }
     }
 }
