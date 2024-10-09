@@ -5,14 +5,17 @@ namespace Game.Scripts.Root.Services
 {
     public class ServiceLocator
     {
-        public static ServiceLocator _instance;
+        private static ServiceLocator _instance;
 
         public static ServiceLocator Instance => _instance ??= new ServiceLocator();
 
-        private Dictionary<Type, object> _services = new();
+        private readonly Dictionary<Type, object> _services = new();
 
         public void RegisterSingle<T>(T service)
         {
+            if (service == null)
+                throw new ArgumentNullException(nameof(service));
+            
             Type type = typeof(T);
             if (_services.TryAdd(type, service) == false)
                 throw new ArgumentException("Service already registered");

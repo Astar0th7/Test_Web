@@ -7,7 +7,7 @@ public class LoadSprites : MonoBehaviour {
     public string[] strings;
 
 
-    public void load() {
+    public void Load() {
         for (int i = 0; i < spriteRenderer.Length; i++) {
             StartCoroutine(LoadSprite(spriteRenderer[i].GetComponent<SpriteRenderer>(), i));
         }
