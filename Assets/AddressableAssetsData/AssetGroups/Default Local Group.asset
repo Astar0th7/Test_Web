@@ -23,11 +23,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1b87de21c89d0ab4290e5c004bd21f1c
-    m_Address: "Assets/\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430/\u0430\u0442\u043B\u0430\u0441.spriteatlasv2"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1fc5b3ca051cfea4aa39e156f7ec9ba5
     m_Address: "Assets/\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430/Image
       10.jpg"
