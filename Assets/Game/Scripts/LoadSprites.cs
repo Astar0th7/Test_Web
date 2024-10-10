@@ -23,7 +23,12 @@ public class LoadSprites : MonoBehaviour
 
     private void LoadSprite(IList<Sprite> sprites)
     {
-        for (int i = 0; i < _spriteRenderer.Length; i++) 
+        for (int i = 0; i < _spriteRenderer.Length; i++)
+        {
+            if (sprites.Count <= i)
+                break;
+            
             _spriteRenderer[i].sprite = sprites[i];
+        }
     }
 }

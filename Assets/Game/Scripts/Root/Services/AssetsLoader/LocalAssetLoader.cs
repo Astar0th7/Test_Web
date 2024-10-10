@@ -12,7 +12,6 @@ namespace Game.Scripts.Root.Services.AssetsLoader
             AsyncOperationHandle<T> handle = Addressables.LoadAssetAsync<T>(assetId);
             await handle.Task;
             T result = handle.Result;
-            handle.Release();
             return result;
         }
 
@@ -21,7 +20,6 @@ namespace Game.Scripts.Root.Services.AssetsLoader
             AsyncOperationHandle<IList<T>> handle = Addressables.LoadAssetsAsync<T>(labelKey, null);
             await handle.Task;
             IList<T> result = handle.Result;
-            handle.Release();
             return result;
         }
     }
